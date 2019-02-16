@@ -16,17 +16,26 @@ body {
 
 h1 {
   margin: 0;
-  font-size: 3rem;
+  font-size: 2rem;
+}
+
+.ubility-logo-content {
+    display: inline-block;
+    vertical-align: middle;
+    border-right: 2px solid white;
+    padding-right: 1.5rem;
 }
 
 .ubility-logo-link {
   text-decoration: none;
   color: white;
+  
 }
 
 .ubility-logo-image {
   display: inline-block;
   vertical-align: middle;
+
 }
 
 .ubility-logo-text {
@@ -37,8 +46,22 @@ h1 {
 }
 
 .fa-wheelchair {
-  font-size: 3rem;
-  display: inline-block;
+        font-size: 3rem;
+        display: inline-block;
+}
+
+
+.ubility-desc-container {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 1.5rem;
+}
+
+.ubility-desc-text {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1rem;
+    text-transform: lowercase;
 }
 
 
