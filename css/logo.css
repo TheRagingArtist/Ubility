@@ -45,7 +45,7 @@ h1 {
   text-transform: uppercase;
 }
 
-.fa-wheelchair {
+i.fas.fa-wheelchair {
         font-size: 3rem;
         display: inline-block;
 }
@@ -61,6 +61,11 @@ h1 {
     display: inline-block;
     vertical-align: middle;
     font-size: 1rem;
+}
+
+.ubility-search-review-container {
+    background-image:url('/Ubility/images/1.png');
+
 }
 
 

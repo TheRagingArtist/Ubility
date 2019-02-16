@@ -1,0 +1,21 @@
+:root {
+  --brand__color_darkblue: #00113D;
+  --brand__color_lightblue: #0732A2;
+  --brand__color_teal: #15E6DD;
+  --brand__color_darkgrey: #75787B;
+  --brand__color_pink: #F94878 ;
+  
+}
+
+body {
+  background-color: var(--brand__color_darkblue);
+  text-transform: lowercase;
+  font-family: Raleway, sans serif;
+  color: white;
+}
+
+.search-results.grid {
+    display: grid;
+
+}
+
