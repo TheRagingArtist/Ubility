@@ -1,0 +1,19 @@
+{
+  "name": "ubility",
+  "version": "1.0.0",
+  "description": "Gives you the ability to find accessible establishments",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katherinemarsh/Ubility.git"
+  },
+  "author": "Katherine Marsh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/katherinemarsh/Ubility/issues"
+  },
+  "homepage": "https://github.com/katherinemarsh/Ubility#readme"
+}
