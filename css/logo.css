@@ -1,0 +1,44 @@
+:root {
+  --brand__color_darkblue: #00113D;
+  --brand__color_lightblue: #0732A2;
+  --brand__color_teal: #15E6DD;
+  --brand__color_darkgrey: #75787B;
+  --brand__color_pink: #F94878 ;
+  
+}
+
+body {
+  background-color: var(--brand__color_darkblue);
+  text-transform: uppercase;
+  font-family: Raleway, sans serif;
+  color: white;
+}
+
+h1 {
+  margin: 0;
+  font-size: 3rem;
+}
+
+.ubility-logo-link {
+  text-decoration: none;
+  color: white;
+}
+
+.ubility-logo-image {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.ubility-logo-text {
+  
+  display: inline-block;
+  vertical-align: middle;
+  color: var(--brand__color_teal);
+}
+
+.fa-wheelchair {
+  font-size: 3rem;
+  display: inline-block;
+}
+
+
