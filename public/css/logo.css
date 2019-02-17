@@ -12,8 +12,7 @@ body {
   text-transform: lowercase;
   font-family: Raleway, sans serif;
   color: white;
-  margin: 0;
-  overflow: hidden;
+  margin: 0; 
   box-sizing: border-box;
 }
 
@@ -94,6 +93,10 @@ i.fas.fa-wheelchair {
     top: 40%;
     left: 50%;
     transform: translate(-50%, 50%);
+}
+
+#search-input {
+    display: inline-block;
 }
 
 input[type="text"] {

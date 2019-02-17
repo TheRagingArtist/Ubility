@@ -8,11 +8,6 @@
   cursor: pointer;
 }
 
-body {
-  overflow: unset !important;
-  margin: .8rem !important;
-}
-
 input {
   display: block;
   border-radius: 5px;
@@ -26,6 +21,10 @@ select {
   color: gray;
 }
 
+#leave-review {
+    margin: .8rem;
+}
+
 .leave-a-review {
   font-size: 1.6rem;
 }
@@ -33,11 +32,6 @@ select {
 .fa-star {
   font-size: 2rem;
   margin: 0 .2rem;
-}
-
-.fa-star:hover {
-  color: var(--brand__color_teal);
-  cursor: pointer;
 }
 
 .form-age-block {
@@ -113,6 +107,22 @@ textarea {
 
 .mini-heading, label {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 900;
+}
+.search-results-grid-item {
+    text-align: center;
+    margin-top: 2rem;
 }
 
+.fa-star.far {
+    color: white;
+}
+
+.fa-star.far:hover {
+  color: var(--brand__color_teal);
+  cursor: pointer;
+}
+
+.fa-star.fas {
+    color: var(--brand__color_teal);
+}
