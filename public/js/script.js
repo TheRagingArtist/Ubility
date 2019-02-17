@@ -42,10 +42,8 @@ $('.search-review-button').on('click', function() {
     getPlaceInfo();
     $(".leave-review").removeClass('hidden');
      $(".review-button").removeClass('hidden');
-    $(".more-accessible-button").removeClass('hidden');    
+    
 });
-
-
 
 function makeImage(photoReference) {
 
@@ -516,81 +514,3 @@ function removeRevForm() {
     $('.leave-review').remove();
     $('.ubility-leave-review-container').remove();
 }
-
-//nessie api starts here
-
-$('.more-accessible-button').on('click', ()=> {
-  $('.fund').removeClass('hidden');
-});
-
-var key = "2ba342e75517db84e190e2bed01a6a8a";
-
-function show_modal_fund_top() {
-  var modal = document.getElementById('modal-fund');
-  modal.style.display = "block";
-}
-
-function hide_modal_fund_top() {
-  var modal = document.getElementById('modal-fund');
-  modal.style.display = "none";
-}
-
-
-//created amedeos merchant for ramp fundraiser
-//created customer Kim Pollard
-//created account
-//posted transaction
-var donationAmount = 0;
-$('.donation-button').on('click', () => {
-
-  $('#modal-fund-content').append('<label for="input-donation"> Enter donation amount below:</label>');
-  $('#modal-fund-content').append('<input type="text" name="input-donation" placeholder="ex. 500" />');
-  $('#modal-fund-content').append('<button class class="submit-donation">Send Donation</button>');
-	show_modal_fund_top();
-});
-
-
-
-$('.submit-donation').on('click', () => {
-  donationAmount = parseInt($('.donation-button').val(), 10);
-  hide_modal_fund_top();
-  var purchase = {
-    "merchant_id": "5c6952ca6759394351bed949",
-    "medium": "balance",
-    "purchase_date": "2019-02-17",
-    "amount": donationAmount,
-    "status": "pending",
-    "description": "funds for ramp"
-  };
-
-  // simple ajax call to post your json data
-  $.ajax({
-    type: 'post',
-    url: 'http://api.reimaginebanking.com/accounts/5c6956016759394351bed9fe/purchases?key=2ba342e75517db84e190e2bed01a6a8a',
-    data: 'data=' + purchase,
-    success: function(result) {
-      alert("thanks for donating!");
-      editProgressBar($donationAmount);
-    },
-    error: function(error) {
-      // check error object or return error
-    }
-  });
-  
-});
-
-function editProgressBar(donationAmount) {
-  var elem = document.getElementById("myBar");   
-  var width = 10;
-  var id = setInterval(frame, (donationAmount/4000));
-  function frame() {
-    if (width >=  (donationAmount/4000)) {
-      clearInterval(id);
-    } else {
-      width++; 
-      elem.style.width = width + '%'; 
-    }
-  }
-}
-
-
