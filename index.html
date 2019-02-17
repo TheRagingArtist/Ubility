@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="public/css/logo.css">
-        <link rel="stylesheet" type="text/css" href="public/css/search.css">
+        <link rel="stylesheet" type="text/css" href="css/logo.css">
+        <link rel="stylesheet" type="text/css" href="css/search.css">
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-        <link rel="icon" type="image/png" href="public/images/favicon-wheelchair.png" >
+        <link rel="icon" type="image/png" href="images/favicon-wheelchair.png" >
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <title>Ubility</title>
@@ -46,21 +46,32 @@
                 </div>      
             </div>
             
-            <div class="search-results-grid-item grid-1">
+            <div class="search-results-grid-item">
 
             </div>
+            <div class="search-results-grid-item"><button class="hidden review-button">See reviews</button></div>
             
-                        <div id="leave-review">
-                <form>
+                            <!-- The Modal -->
+                <div id="modal-item" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                    <span class="close" id="close-top-1" onclick="hide_modal_top(this.id)">×</span>
+                    </div>
+                </div>
+            
+                <div class = "hidden leave-review">
+                <h2 class="leave-review-heading">Leave a review</h2>
+                <div class="leave-review-container">
+                <form id="leave-review-form">
                   <div class="form-name-age">
                     <div class="form-name-block"/>
                         <label for="name">Name (optional): </label>  
-                        <input type="text" name="name" placeholder="ex) jane doe">
+                        <input class="form-name" type="text" name="name" placeholder="ex) grace hopper">
                     </div>
                     
                     <div class="form-age-block">
                       <label for="age-demo">Age:</label>
-                      <select name="age-demo">
+                      <select class="form-age" name="age-demo">
                         <option disabled selected value> -- select an option -- </option>
                         <option value="under18">under 18</option>
                         <option value="18-24">18 - 24</option>
@@ -75,25 +86,25 @@
                   
                   <div class="form-disability-feedback">
                     <label for="disability">Disability:</label>
-                    <input type="text" name="disability" placeholder="ex) mobility (crutches)">
+                    <input type="text" class="form-dis" name="disability" placeholder="ex) mobility (crutches)">
                   </div>
                   <div class="form-access-friendly"> 
                     <div class="friendly"> 
                         <div class="mini-heading">Disability Friendly:</div>
-                        <span class="fas fa-grin-beam react"></span>
-                        <span class="fas fa-meh react"></span>
-                        <span class="fas fa-frown react"></span>
+                        <span class="fas fa-grin-beam le react" id="smile"></span>
+                        <span class="fas fa-meh le react" id="meh"></span>
+                        <span class="fas fa-frown le react" id="frown"></span>
                     </div>
                      
                     <div class="form-accessibility-block">
                       <div class="mini-heading">Accessibility:</div>
-                      <span class="fas fa-blind accessibility"></span>
-                      <span class="fas fa-deaf accessibility"></span>
-                      <span class="fas fa-sign-language accessibility"></span>
-                      <span class="fas fa-dog accessibility"></span>
-                      <span class="fas fa-wheelchair accessibility"></span>
-                      <span class="fas fa-crutch accessibility"></span>
-                      <span class="fas fa-lightbulb accessibility"></span>
+                      <span class="fas fa-blind ab accessibility" id="blind"></span>
+                      <span class="fas fa-deaf ab accessibility" id="deaf"></span>
+                      <span class="fas fa-sign-language ab accessibility" id="sign"></span>
+                      <span class="fas fa-dog ab accessibility" id="dog"></span>
+                      <span class="fas fa-wheelchair ab accessibility" id="wheelchair"></span>
+                      <span class="fas fa-crutch ab accessibility" id="crutch"></span>
+                      <span class="fas fa-lightbulb ab accessibility" id="lightbulb"></span>
                     </div>
                   </div>
                   <div class="form-rating-block">
@@ -106,14 +117,14 @@
                   </div>
                   
                   <div class="form-review-block">
-                    <label for="review">Review:</label>
-                    <textarea name="review" cols="65" rows="4" placeholder="Enter your thoughts..."></textarea>
+                    <label class="mini-heading" for="review">Review:</label>
+                    <textarea class="form-rev" name="review" cols="65" rows="4" placeholder="Enter your thoughts..."></textarea>
                   </div>
                 </form>
-            </div> 
-
-            
+                <button class="submit-button">Submit your review!</button>
+                </div>
         </div>
-        <script src="public/js/script.js"></script>
+            </div> 
+        <script src="js/script.js"></script>
     </body>
 </html>

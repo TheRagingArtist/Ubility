@@ -75,7 +75,7 @@ i.fas.fa-wheelchair {
     background-image: url('../images/5.png');
     background-size: cover;
     overflow: hidden;
-    padding-bottom: 60%;
+    padding-bottom: 65%;
     position: relative;
 
 }
@@ -127,4 +127,47 @@ button.search-review-button:hover {
 
 i.fas.fa-search {
     font-size: 18px;
+}
+
+/* The following modal code was obtained by w3schools tutorial at https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal */
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Content */
+.modal-content {
+  color: black;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 80%;
+    text-transform: none;
+}
+
+.accessibilityRating {
+    display: inline-block;
+}
+.accessibility-rating {
+    padding: .5rem 0;
+}
+
+.friendlyRating {
+    display: inline-block;
+}
+
+.font-react {
+    font-size: 2rem;
+   margin: .5rem .5rem 0 .5rem;
+
 }
