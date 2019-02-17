@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="css/logo.css">
-        <link rel="stylesheet" type="text/css" href="css/search.css">
+        <link rel="stylesheet" type="text/css" href="public/css/logo.css">
+        <link rel="stylesheet" type="text/css" href="public/css/search.css">
+        <link rel="stylesheet" type="text/css" href="public/css/nessyFUN.css">
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <link rel="icon" type="image/png" href="images/favicon-wheelchair.png" >
@@ -49,7 +50,8 @@
             <div class="search-results-grid-item">
 
             </div>
-            <div class="search-results-grid-item"><button class="hidden review-button">See reviews</button></div>
+            <div class="search-results-grid-item"><button class="hidden review-button">See reviews</button>
+                        <button class="hidden more-accessible-button">Help Us Become More Accessible!</button></div>
             
                             <!-- The Modal -->
                 <div id="modal-item" class="modal">
@@ -58,7 +60,25 @@
                     <span class="close" id="close-top-1" onclick="hide_modal_top(this.id)">×</span>
                     </div>
                 </div>
-            
+
+<!-- Nessie Api Block -->
+            <div class="hidden fund">
+              <h3 class="fund-for"> Donate to:  <span style="color: #15E6DD;">Amedeo's</span></h3>
+              <p class="fund-description">Help NC State's favorite local pizzeria fund a wheelchair ramp!</p>
+              <h4>Goal: $4,000</h4>
+              <div id="myProgress">
+                <div id="myBar"></div>
+              </div>
+              <!-- The Modal -->
+              <div id="modal-fund" class="modal">
+            <!-- Modal content -->
+              <div class="modal-fund-content">
+                  <span class="close" id="close-top-2" onclick="hide_modal_fund_top(this.id)">×</span>
+              </div>
+              </div>
+              <button type="button" class="donation-button">I'd Like to Donate!</button> 
+
+            </div>
                 <div class = "hidden leave-review">
                 <h2 class="leave-review-heading">Leave a review</h2>
                 <div class="leave-review-container">
@@ -125,6 +145,6 @@
                 </div>
         </div>
             </div> 
-        <script src="js/script.js"></script>
+        <script src="public/js/script.js"></script>
     </body>
 </html>

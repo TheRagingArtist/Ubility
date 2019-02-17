@@ -207,7 +207,21 @@ textarea {
     cursor: pointer;
 
 }
-
+.more-accessible-button {
+    font-family: Raleway, sans serif;
+    text-transform: lowercase;
+    font-size: 1rem;
+    padding: .5rem;
+    border: none;
+    border-radius: 5px;
+    margin: .8rem 0;  
+    font-weight: 900;  
+}
+.more-accessible-button:hover {
+    background-color: var(--brand__color_teal);
+    cursor: pointer;
+    
+}
 .review-button {
     font-family: Raleway, sans serif;
     text-transform: lowercase;
