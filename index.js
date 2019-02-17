@@ -8,6 +8,8 @@ app.get('/' , function(req, res) {
 	res.sendFile(path.join(__dirname, '/index.html'));
 });
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 const server = app.listen(8080, () => {
   const host = server.address().address;
   const port = server.address().port;

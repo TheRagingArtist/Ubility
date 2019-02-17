@@ -1,10 +1,9 @@
-
 var baseUrl = "https://maps.googleapis.com/maps/api/place/";
 var myApiKey = "AIzaSyAZBwN5cFJ-AU3LZj_xvRudj7HP8YODsrU";
 
 function getPlaceInfo() {
   var urlExtend = baseUrl + "findplacefromtext/json?input=";
-  var query = document.querySelector('#search-input').value;
+  var query = $('#search-input').value;
   var words = query.split(' ');
   words.forEach(function(word) {
     urlExtend += word;
