@@ -70,11 +70,11 @@
                     <p class="user-age"></p>
                     <p class="user-disability"></p>
                     <div class="user-rating">
-                        <span class="far fa-star"></span>
-                        <span class="far fa-star"></span>
-                        <span class="far fa-star"></span>
-                        <span class="far fa-star"></span>
-                        <span class="far fa-star"></span>
+                        <!-- <span class="far fa-star"></span> -->
+                        <!-- <span class="far fa-star"></span> -->
+                        <!-- <span class="far fa-star"></span> -->
+                        <!-- <span class="far fa-star"></span> -->
+                        <!-- <span class="far fa-star"></span> -->
                     </div>
                     <div class="user-accessibility"></div>
                     <div class="user-review-text"></div>
@@ -84,47 +84,70 @@
             
             <div class="ubility-leave-review-container">
                 <h3 class="leave-a-review">Leave a review</h3>
-                <a class="leave-review-form-link" href="#leave-review">
-                    <button type="button" class="leave-review-button">Review a place</button>
-                </a>
+                <!-- <a class="leave-review-form-link" href="#leave-review"> -->
+                    <!-- <button type="button" class="leave-review-button">Review a place</button> -->
+                <!-- </a> -->
             </div>     
             
             <div id="leave-review">
                 <form>
-                    <label for="name">Name (optional): </label>
-                    <input type="text" name="name">
-                    <label for="age">Age:</label>
-                    <input type="test" name="age">
+                  <div class="form-name-age">
+                    <div class="form-name-block"/>
+                        <label for="name">Name (optional): </label>  
+                        <input type="text" name="name" placeholder="ex) jane doe">
+                    </div>
+                    
+                    <div class="form-age-block">
+                      <label for="age-demo">Age:</label>
+                      <select name="age-demo">
+                        <option disabled selected value> -- select an option -- </option>
+                        <option value="under18">under 18</option>
+                        <option value="18-24">18 - 24</option>
+                        <option value="25-34">25 - 34</option>
+                        <option value="35-44">35 - 44</option>
+                        <option value="45-54">25 - 34</option>
+                        <option value="55-64">55 - 64</option>
+                        <option value="65+">65 and up</option>
+                      </select>
+                    </div>
+                  </div>
+                  
+                  <div class="form-disability-feedback">
                     <label for="disability">Disability:</label>
-                    <input type="text" name="disability">
-                    
-                    <div class="rating">Rating:</div>
-                    <span class="far fa-star"></span>
-                    <span class="far fa-star"></span>
-                    <span class="far fa-star"></span>
-                    <span class="far fa-star"></span>
-                    <span class="far fa-star"></span>
-                    
-                    <div class="friendly"> </div>
+                    <input type="text" name="disability" placeholder="ex) mobility (crutches)">
+                  </div>
+                  <div class="form-access-friendly"> 
+                    <div class="friendly"> 
                         <div class="mini-heading">Disability Friendly:</div>
                         <span class="fas fa-grin-beam react"></span>
                         <span class="fas fa-meh react"></span>
                         <span class="fas fa-frown react"></span>
                     </div>
-                    
-                    <div class="mini-heading">Accessibility:</div>
-                    <span class="fas fa-blind accessibility"></span>
-                    <span class="fas fa-deaf accessibility"></span>
-                    <span class="fas fa-sign-language accessibility"></span>
-                    <span class="fas fa-dog accessibility"></span>
-                    <span class="fas fa-wheelchair accessibility"></span>
-                    <span class="fas fa-crutch accessibility"></span>
-                    <span class="fas fa-lightbulb accessibility"></span>
-                  
-                    <div>
-                      <label for="review">Review:</label>
-                      <input type="text" name="review">
+                     
+                    <div class="form-accessibility-block">
+                      <div class="mini-heading">Accessibility:</div>
+                      <span class="fas fa-blind accessibility"></span>
+                      <span class="fas fa-deaf accessibility"></span>
+                      <span class="fas fa-sign-language accessibility"></span>
+                      <span class="fas fa-dog accessibility"></span>
+                      <span class="fas fa-wheelchair accessibility"></span>
+                      <span class="fas fa-crutch accessibility"></span>
+                      <span class="fas fa-lightbulb accessibility"></span>
                     </div>
+                  </div>
+                  <div class="form-rating-block">
+                    <div class="rating mini-heading">Rating:</div>
+                    <span class="far fa-star 1 2 3 4 5"></span>
+                    <span class="far fa-star 2 3 4 5"></span>
+                    <span class="far fa-star 3 4 5"></span>
+                    <span class="far fa-star 4 5"></span>
+                    <span class="far fa-star 5"></span>
+                  </div>
+                  
+                  <div class="form-review-block">
+                    <label for="review">Review:</label>
+                    <textarea name="review" cols="65" rows="4" placeholder="Enter your thoughts..."></textarea>
+                  </div>
                 </form>
             </div> 
     

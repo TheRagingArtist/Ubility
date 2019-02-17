@@ -1,10 +1,11 @@
-:root {
-  --brand__color_darkblue: #00113D;
-  --brand__color_lightblue: #0732A2;
-  --brand__color_teal: #15E6DD;
-  --brand__color_darkgrey: #75787B;
-  --brand__color_pink: #F94878 ;
-  
+.accessibility {
+  font-size: 2rem;
+  margin: .5rem 1rem;
+}
+
+.accessibility:hover {
+  color: var(--brand__color_teal);
+  cursor: pointer;
 }
 
 body {
@@ -12,23 +13,92 @@ body {
   margin: .8rem !important;
 }
 
-
-
 input {
   display: block;
+  border-radius: 5px;
+}
+
+select {
+  display: block;
+  min-height: 30px;
+  border-radius: 5px;
+  font-size: 20px;
+  color: gray;
 }
 
 .leave-a-review {
   font-size: 1.6rem;
 }
 
+.fa-star {
+  font-size: 2rem;
+  margin: 0 .2rem;
+}
+
+.fa-star:hover {
+  color: var(--brand__color_teal);
+  cursor: pointer;
+}
+
+.form-age-block {
+  float: left;
+  margin-left: 5rem;
+}
+
+.form-accessibility-block {
+  margin-bottom: 1rem;
+  float:left;
+  padding-left: 2rem;
+  border-left: 1px solid white;
+}
+
+.form-name-age:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.form-access-friendly {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.form-name-age {
+  margin-bottom: 1rem;
+}
+
+.form-disability-feedback input {
+  width: 687px !important;
+}
+
+.form-rating-block {
+  margin-bottom: 1rem;
+}
+
+.form-disability-feedback {
+  margin-bottom: 1rem;
+}
+
+.form-name-block {
+  float: left;
+}
+
+.friendly {
+  margin-bottom: 1rem;
+  float:left;
+  padding-right: 1.4rem;
+}
+
 .search-results.grid {
     display: grid;
 }
 
-.accessibility {
-  font-size: 2rem;
-  margin: .5rem 1rem;
+textarea {
+  display: block;
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: sans-serif;
 }
 
 .react {
@@ -36,6 +106,13 @@ input {
   margin: .5rem 1rem;
 }
 
-.fa-star {
-  font-size: 2rem;
+.react:hover {
+  color: var(--brand__color_teal);
+  cursor: pointer;
 }
+
+.mini-heading, label {
+  font-size: 18px;
+  font-weight: 600;
+}
+
