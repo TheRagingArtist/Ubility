@@ -8,14 +8,34 @@
 }
 
 body {
-  background-color: var(--brand__color_darkblue);
-  text-transform: lowercase;
-  font-family: Raleway, sans serif;
-  color: white;
+  overflow: unset !important;
+  margin: .8rem !important;
+}
+
+
+
+input {
+  display: block;
+}
+
+.leave-a-review {
+  font-size: 1.6rem;
 }
 
 .search-results.grid {
     display: grid;
-
 }
 
+.accessibility {
+  font-size: 2rem;
+  margin: .5rem 1rem;
+}
+
+.react {
+  font-size: 2rem;
+  margin: .5rem 1rem;
+}
+
+.fa-star {
+  font-size: 2rem;
+}
