@@ -12,11 +12,19 @@ body {
   text-transform: lowercase;
   font-family: Raleway, sans serif;
   color: white;
+  margin: 0;
+  overflow: hidden;
 }
 
 h1 {
   margin: 0;
   font-size: 2rem;
+}
+
+.ubility-header {
+
+    margin: .8rem;
+
 }
 
 .ubility-logo-content {
@@ -64,8 +72,55 @@ i.fas.fa-wheelchair {
 }
 
 .ubility-search-review-container {
-    background-image:url('/Ubility/images/1.png');
+    background-image: url('../images/5.png');
+    background-size: cover;
+    overflow: hidden;
+    padding-bottom: 60%;
+    position: relative;
 
 }
 
+.ubility-search-review-heading {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+}
 
+#search-review-bar {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+input[type="text"] {
+    border-radius: 3px;
+    width: 325px;
+    font-size: 22px;
+}
+
+input:focus, button:focus {
+
+    outline: none;
+
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+button.search-review-button {
+    padding: .4rem .6rem;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+button.search-review-button:hover {
+    cursor:pointer;
+}
+
+i.fas.fa-search {
+    font-size: 18px;
+}
