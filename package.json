@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/katherinemarsh/Ubility#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "googleplaces": "^0.6.1",
+    "jquery": "^3.3.1"
   }
 }
