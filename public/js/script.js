@@ -35,7 +35,6 @@ function getUrl() {
 function placeSearch(latitude, longitude, radius) {
     https.request({
         host: 'maps.googleapis.com',
-        path: '/maps/api/place/findplacefromtext/json?input='
         path: getUrl() + radius + '@' + latitude + ',' + longitude + '&key=' + myApiKey,
         method: 'GET'},
         PlaceResponse).end();
