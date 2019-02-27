@@ -43,6 +43,9 @@ $('.search-review-button').on('click', function() {
     getPlaceInfo();
     $(".leave-review").removeClass('hidden');
      $(".review-button").removeClass('hidden');
+         $('html, body').animate({
+        scrollTop: $('.search-results-grid-item').offset().top
+    }, 2000);
     
 });
 
