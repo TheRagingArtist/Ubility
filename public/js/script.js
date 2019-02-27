@@ -1,113 +1,42 @@
 var baseUrl = "https://maps.googleapis.com/maps/api/place/";
 var myApiKey = "AIzaSyAZBwN5cFJ-AU3LZj_xvRudj7HP8YODsrU";
 
-
-var https = require('follow-redirects').https;
-
-var placeDetails = function() {
-    this.places = [];
-}
-
-
-function getCoordinates(zipcode) {
-    https.request({
-        host: 'maps.googleapis.com',
-        path: '/maps/api/geocode/json?address=' + zipcode + '&key=' + myApiKey,
-        method: 'GET'},
-        CoordinateResponse).end();
-}
-
-function getUrl() {
-    var url = '/maps/api/place/findplacefromtext/json?input=';
-    var query = $('#search-input').val();
-    var words = query.split(' ');
-    words.forEach(function(word) {
-        url += word;
-        if (word !== words[(words.length - 1)]) {
-            url += "%20";
-        }
-    });
-    url += "&inputtype=textquery&fields=photos,formatted_address,name" +
-        "&locationbias=circle:";
-    return url;
-}
-
-function placeSearch(latitude, longitude, radius) {
-    https.request({
-        host: 'maps.googleapis.com',
-        path: getUrl() + radius + '@' + latitude + ',' + longitude + '&key=' + myApiKey,
-        method: 'GET'},
-        PlaceResponse).end();
-}
-
-function CoordinateResponse(response) {
-    var data = "";
-    var sdata = "";
-    var latitude = "";
-    var longitude = "";
-
-    response.on('data', function(chunk) {
-        data += chunk;
-    });
-    response.on('end', function() {
-        sdata = JSON.parse(data);
-        latitude = sdata.results[0].geometry.viewport.northeast.lat;
-        longitude = sdata.results[0].geometry.viewport.northeast.lng;
-        placeSearch(latitude, longitude, 20000);
-    });
-}
-
-function PlaceResponse(response) {
-    var p;
-    var data = "";
-    var sdata = "";
-    var PD = new placeDetails();
-
-    response.on('data', function(chunk) {
-        data += chunk;
-    });
-    response.on('end', function() {
-        sdata = JSON.parse(data);
-        if (sdata.status === 'OK') {
-            console.log('Status: ' + sdata.status);
-            console.log('Results: ' + sdata.results.length);
-            for (p = 0; p < sdata.results.length; p++) {
-                PD.places.push(sdata.results[p]);
-            }
-            for (r = 0; r < sdata.results.length; r++) {
-                var name = PD.places[r].name;
-                var address = PD.places[r].place_id;
+function getPlaceInfo() {
+  var urlExtend = baseUrl + "findplacefromtext/json?input=";
+  var query = $('#search-input').val();
+  var words = query.split(' ');
+  words.forEach(function(word) {
+    urlExtend += word;
+    if (word !== words[(words.length - 1)]) {
+      urlExtend += "%20";
+    }
+  });
+  urlExtend += "&inputtype=textquery&fields=photos,formatted_address,name" +
+  "&locationbias=circle:2000@35.7796,-78.6382&key=";
+  urlExtend += myApiKey;
+  
+  var name = '';
+  var address = '';
+  var imageUrl = '';
+  
+    var json = $.ajax({
+        url:urlExtend,
+        type:"GET",
+        dataType: 'jsonp',
+        success: function(result) {
+            result.candidates.forEach(function(candidate) {
+            
+                name = candidate.name;
+                address = candidate.formatted_address;
+                imageUrl = candidate.photos[0].photo_reference;
+                
+                makeImage(imageUrl);
                 makeName(name);
                 makeAddress(address);
-            }
-        } else {
-            console.log(sdata.status);
+            
+            });
         }
     });
-}
- //Enter a zip code here to try it out (Nashville in this case)
-
-function getPlaceInfo() {
-    getCoordinates(27607);
-  // var imageUrl = '';
-  
-  //   var json = $.ajax({
-  //       url:urlExtend,
-  //       type:"GET",
-  //       success: function(result) {
-  //           result.candidates.forEach(function(candidate) {
-            
-  //               name = candidate.name;
-  //               address = candidate.formatted_address;
-  //               imageUrl = candidate.photos[0].photo_reference;
-                
-  //               makeImage(imageUrl);
-  //               makeName(name);
-  //               makeAddress(address);
-            
-  //           });
-  //       }
-  //   });
 }
 
 $('.search-review-button').on('click', function() {
