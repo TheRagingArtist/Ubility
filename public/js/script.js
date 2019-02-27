@@ -22,7 +22,6 @@ function getPlaceInfo() {
     var json = $.ajax({
         url:urlExtend,
         type:"GET",
-        dataType: 'jsonp',
         success: function(result) {
             result.candidates.forEach(function(candidate) {
             

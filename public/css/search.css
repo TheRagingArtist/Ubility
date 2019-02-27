@@ -159,6 +159,7 @@ textarea {
 .search-results-grid-item {
     text-align: center;
     margin-top: 2rem;
+    text-transform: none;
 }
 
 .fa-star.far {
